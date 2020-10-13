@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Repositories\CrawlerRepository;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Response;
 
@@ -170,4 +171,11 @@ class CrawlerController extends Controller
 
         return $nodes;
     }
+
+
+    public function crawler(){
+        $repo = new CrawlerRepository();
+        $repo->crawler();
+    }
+
 }

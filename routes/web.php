@@ -16,6 +16,10 @@ Route::get('/', function () {
 });
 
 Route::prefix('crawler')->name('crawler.')->group(function () {
-    Route::get('/', 'CrawlerController@index')->name('index');
+    Route::get('/', 'CrawlerController@crawler')->name('index');
+
+});
+Route::prefix('images')->name('images.')->group(function () {
+    Route::get('/', 'ImagesController@index')->name('index');
 
 });
